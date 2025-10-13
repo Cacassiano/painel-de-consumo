@@ -15,6 +15,9 @@
     --dark-blue: #3E5C76;
 }
 
+/*******************************************
+************** Header Styles **************
+*******************************************/
 header {
     background-image: linear-gradient(to right, var(--light-blue), var(--regular-blue));
     display: flex;
@@ -54,4 +57,13 @@ header menu a:hover, a.selected {
     font-weight: bold;
     cursor: pointer;
     background-color: var(--dark-blue);
+}
+
+
+/*******************************************
+************** Main Styles *****************
+*******************************************/
+
+main {
+    
 }
