@@ -1,11 +1,34 @@
+@charset "UTF-8";
+
 /***************************************/
 /****** Global Configs *****************/
 /***************************************/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* reset css*/
-*{
+*{          
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: min(1rem, 4vw);
+}
+
+h1 {
+    font-size: min(2rem, 8vw);
+}
+h2{
+    font-size: min(1.5rem, 6vw);
+}
+
+body {
+    background-image: linear-gradient(
+        125deg, 
+        var(--regular-blue), 
+        var(--dark-blue)
+    );
+    background-attachment: fixed;
 }
 
 :root {
@@ -13,13 +36,13 @@
     --light-blue: #9FBBCC;
     --regular-blue: #7A9CC6;
     --dark-blue: #3E5C76;
+    --font-title: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*******************************************
 ************** Header Styles **************
 *******************************************/
 header {
-    background-image: linear-gradient(to right, var(--light-blue), var(--regular-blue));
     display: flex;
     padding: 10px 20px;
     flex-wrap: wrap;
@@ -27,25 +50,33 @@ header {
     justify-content: space-around;
 }
 
-header h1, menu, a{
+header h1, menu, .menu-element{
     text-align: center;
     display: inline;
-    color: var(--contrast-color);
-    text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.699) ;
+    color: black;
     text-decoration: none;
 }
-
-header h1, menu {
-    margin: 7px 0;
+header h1 {
+    font-family: var(--font-title);
+    letter-spacing: -2px;
 }
 
 header menu {
     display: flex;
-    gap: 12px;
+    width: 50%;
+    min-width: fit-content;
     justify-content: space-around;
 }
 
-header menu a {
+header menu.mobile {
+    /* display: none; */
+    width: 100%;
+    position: absolute;
+    background-color: rgb(76, 76, 76);
+    padding: 10px 20px;
+}
+
+header menu .menu-element {
     padding: 10px;
     border-radius: 5px;
     overflow: hidden;
@@ -53,10 +84,11 @@ header menu a {
 }
 
 
-header menu a:hover, a.selected {
+header menu .menu-element:hover, .selected {
     font-weight: bold;
     cursor: pointer;
-    background-color: var(--dark-blue);
+    color: rgba(255, 255, 255, 0.842);
+    background-color: black;
 }
 
 
