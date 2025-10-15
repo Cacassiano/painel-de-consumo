@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css" media="all">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 700px)">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -43,7 +44,65 @@
                 </div>
             </section>
         </article>
-        
+        <script>
+
+            const data_light = {
+                labels: ['Luzes Domésticas', 'Eletrodomésticos', 'Televisão', "Ar-condicionado", "Outros"],
+                datasets: [
+                    {
+                        label: "KW/h gastos",
+                        data: [25, 30, 17, 50, 5]
+                    }
+                ]
+            }
+            const data_water = {
+                labels: ["Lava-louça", "Banho", "Maquina de lavar", "Outros"],
+                datasets: [
+                    {
+                        label: "Litros de água",
+                        data: [12, 20, 30, 3]
+                    }
+                ]
+            }
+            const data_gas = {
+                labels: ["Cozinha", "Vazamentos", "Outros"],
+                datasets: [
+                    {
+                        label:"Kg de gás", 
+                        data: [50, 10, 2]
+                    }
+                ]
+            }
+            const options = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top"
+                    },
+                    title: {
+                        display: true,
+                        text: "Gastos do mês"
+                    }
+                }
+            }
+            new Chart(g_light, {
+                type: "pie",
+                data: data_light,
+                options: options
+            })
+            new Chart(g_water, {
+                type:"pie",
+                data: data_water,
+                options: options
+            })
+
+            new Chart(g_gas, {
+                type: "pie",
+                data: data_gas,
+                options: options
+            })
+
+        </script>
     </main>
 
 
