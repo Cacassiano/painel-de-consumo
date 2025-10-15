@@ -14,6 +14,6 @@ main article {
 
 }
 
-.card-summary {
+.card-summary , .total-summary {
     width: 90%;
 }
