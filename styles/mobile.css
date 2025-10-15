@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+    
+header menu {
+    width: 100%;
+}
+header menu .menu-element {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+main article {
+    flex-direction: column;
+
+}
+
+.card-summary {
+    width: 90%;
+}
