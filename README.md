@@ -4,7 +4,7 @@ Um **dashboard interativo e responsivo** desenvolvido com **HTML, CSS e JavaScri
 
 O painel apresenta um **gráfico dinâmico** que permite visualizar de forma clara e intuitiva a evolução dos dados, tornando o acompanhamento da sustentabilidade mais acessível e didático.
 
-link: 
+link: https://cacassiano.github.io/painel-de-consumo/
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,3 +99,4 @@ Durante o desenvolvimento, os principais aprendizados foram:
 - Implementar **gráficos interativos com JavaScript**  
 - Trabalhar com **componentes reutilizáveis** e **variáveis CSS**  
 - Melhorar a **organização visual de dados** em dashboards  
+
